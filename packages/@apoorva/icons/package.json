@@ -1,0 +1,15 @@
+{
+  "name": "@apoorva/icons",
+  "private": true,
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

@@ -71,6 +71,23 @@ root/
 
 - **Purpose:** Physical folder/package structure for the monorepo, showing where core components, icons, and documentation live, plus areas for tooling, CI, and architecture docs.
 
+apoorva-ui-library/ # Root repo
+├── .gitignore # Ignores build artifacts and other files
+├── package.json # Root workspace config
+├── pnpm-workspace.yaml # Defines workspace package globs
+├── docs/
+│ └── architecture/
+│ └── playbook.md # Your governance & process documentation
+└── packages/
+├── @apoorva/
+│ ├── components/
+│ │ └── src/ # Source code for UI components
+│ ├── icons/
+│ │ └── src/ # Source code for icons
+│ └── docs/ # Documentation package (Storybook, etc.)
+└── (future packages) # Any additional non-scoped packages
+└── tools/ # Internal scripts, CLIs, build tools (empty for now)
+
 ---
 
 ### **Blueprint 2 — Packaging and exports**
