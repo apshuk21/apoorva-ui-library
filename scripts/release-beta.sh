@@ -16,7 +16,7 @@ pnpm version prerelease --preid beta
 
 # Step 4: Bump non-private workspace versions
 echo "🔧 Bumping workspace versions..."
-pnpm -r exec --filter='[!private]' pnpm version prerelease --preid beta
+pnpm -r --filter='[!private]' exec pnpm version prerelease --preid beta
 
 # Step 5: Extract root version
 VERSION=$(node -p "require('./package.json').version")
