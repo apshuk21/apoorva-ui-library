@@ -32,7 +32,11 @@ git commit -m "chore: prerelease bump to v$VERSION"
 git tag "v$VERSION"
 
 # Step 9: Push commit and tag
-git push origin HEAD
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "📤 Pushing commit to branch: $CURRENT_BRANCH"
+git push origin "$CURRENT_BRANCH"
+
+echo "🏷️ Pushing tag: v$VERSION"
 git push origin "v$VERSION"
 
 # Step 10: Optional dry-run publish
